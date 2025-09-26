@@ -2,13 +2,23 @@
   "name": "react-standalone",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
   "scripts": {
-    "serve": "live-server"
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "api": "cd api && node server.js",
+    "dev": "concurrently \"npm run start\" \"npm run api\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "live-server": "^1.2.2"
-  }
+    "concurrently": "^9.2.1",
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
